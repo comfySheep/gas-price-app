@@ -21,5 +21,8 @@ jobs:
     - run: npm test
       env:
         CI: true
-    - run: npm run deploy
+    - name: Deploy to gh-pages
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: npm run deploy
       
