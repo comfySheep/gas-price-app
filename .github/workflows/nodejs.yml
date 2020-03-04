@@ -23,8 +23,8 @@ jobs:
         CI: true
     - name: Deploy to gh-pages
       env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        git remote set-url origin https://github.com/comfySheep/gas-price-app.git
+        git remote set-url origin "https://comfySheep:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
         npm run deploy
       
