@@ -24,5 +24,8 @@ jobs:
     - name: Deploy to gh-pages
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: npm run deploy --name="deploy-bot" --email="7jgjung@gmail.com"
+      run: |
+        git config user.name "deploy-bot"
+        git config user.email "7jgjung@gmai.com"
+        npm run deploy
       
