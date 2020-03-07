@@ -5,14 +5,14 @@ export function getGasStationsService(params) {
   const { latitude, longitude, distance, fuelType, sortBy } = params;
   /* return fetch(`/stations/radius/${latitude}/${longitude}/${distance}/${fuelType}/${sortBy}/${apiKey}`); */
   return request({
-    url: `/stations/radius/${latitude}/${longitude}/${distance}/${fuelType}/${sortBy}/${apiKey}`,
+    url: `${url}/stations/radius/${latitude}/${longitude}/${distance}/${fuelType}/${sortBy}/${apiKey}`,
     method: "get"
   });
 }
 
 export function getGasStationDetailService({ stationId }) {
   return request({
-    url: `/stations/details/${stationId}/${apiKey}`,
+    url: `${url}/stations/details/${stationId}/${apiKey}`,
     method: "get"
   });
 }
