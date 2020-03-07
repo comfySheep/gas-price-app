@@ -22,8 +22,8 @@ function App() {
   return (
     <Router history={history}>
       <Switch>
-        <AppRoute exact path="/gas-price-app" layout={SearchLayout} page={GasStationList}></AppRoute>
-        <AppRoute path="/gas-price-app/station/:stationId" layout={SearchLayout} page={GasStationDetail}></AppRoute>
+        <AppRoute exact path="/" layout={SearchLayout} page={GasStationList}></AppRoute>
+        <AppRoute path="/station/:stationId" layout={SearchLayout} page={GasStationDetail}></AppRoute>
       </Switch>
     </Router>
   );
