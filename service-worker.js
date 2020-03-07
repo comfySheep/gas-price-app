@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/gas-price-app/precache-manifest.43742e44a8d7ba6eff8f39df3ec1f251.js"
+  "/gas-price-app/precache-manifest.25924c36eebf39104afac1a2043003b0.js"
 );
 
 self.addEventListener('message', (event) => {
