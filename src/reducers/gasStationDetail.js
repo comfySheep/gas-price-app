@@ -1,4 +1,4 @@
-import { DETAIL_ACTIONS, ACTIONS } from "actions/constants";
+import { DETAIL_ACTIONS } from "actions/constants";
 const initialState = {
   gasStationDetail: {}
 };
@@ -27,9 +27,7 @@ const gasStationDetail = (state = initialState, { type, payload }) => {
       };
       return { ...state, gasStationDetail };
     }
-    case ACTIONS.UPDATE_STATE: {
-      return { ...state, ...payload };
-    }
+
     default: {
       return state;
     }
