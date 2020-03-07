@@ -4,7 +4,7 @@ import history from "History";
 import { SearchLayout } from "layouts";
 import GasStationList from "page/GasStationList";
 import GasStationDetail from "page/GasStationDetail";
-import "./App.scss";
+import "styles/index.scss";
 
 const AppRoute = ({ page: Page, layout: Layout, ...rest }) => (
   <Route

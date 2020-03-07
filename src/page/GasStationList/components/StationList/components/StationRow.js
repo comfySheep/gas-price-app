@@ -1,13 +1,24 @@
-import React from "react";
-import { helpers } from "tools";
+import React, { Fragment } from "react";
+import { helpers, constants } from "tools";
+
+const { handleSelectStation } = helpers;
+const { CLEAR_BIT_LOGO_URL } = constants;
 
 const StationRow = props => {
   const { gasStation } = props;
   const { id, station, address, zip, reg_price, mid_price, pre_price, diesel_price, distance } = gasStation;
-
   return (
-    <div className="generic-row" onClick={() => helpers.handleSelectStation(id)}>
-      <div className="station-title">{station}</div>
+    <div className="generic-row" onClick={() => handleSelectStation(id)}>
+      {station ? (
+        <Fragment>
+          <img
+            src={`${CLEAR_BIT_LOGO_URL}/${station}.com`}
+            onError={err => (err.target.style.display = "none")}
+            alt={`logo-${station}`}
+          />
+          <div className="station_name">{station}</div>
+        </Fragment>
+      ) : null}
       <div className="station-address">
         {address}, {zip}
       </div>

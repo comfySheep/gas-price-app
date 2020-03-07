@@ -1,7 +1,7 @@
 import React from "react";
 
-const Loading = () => {
-  return <div id="loading">Loading...</div>;
+const Loading = ({ loading }) => {
+  return <div id="loading" className={`${!loading ? "hidden" : ""}`}></div>;
 };
 
 export default Loading;

@@ -11,7 +11,7 @@ class SearchLayout extends Component {
   constructor() {
     super();
 
-    this.state = { sortBy: "distance", searchDistance: 1 };
+    this.state = { sortBy: "distance", searchDistance: "1" };
 
     this.handleUpdateSortBy = this.handleUpdateSortBy.bind(this);
     this.handleUpdateSearchDistance = this.handleUpdateSearchDistance.bind(this);
@@ -62,34 +62,44 @@ class SearchLayout extends Component {
 
   render() {
     const { loading } = this.props;
-
+    const { sortBy, searchDistance } = this.state;
     return (
       <Fragment>
         <div id="search-layout">
           <div id="sort-buttons-container">
             <span>Sort By: </span>
             {SEARCH_SORT_OPTIONS.map(({ key, name }) => (
-              <button className="btn" key={`search-sort-option-${key}`} value={key} onClick={this.handleUpdateSortBy}>
+              <button
+                className={`${sortBy === key ? "btn active" : "btn"}`}
+                key={`search-sort-option-${key}`}
+                value={key}
+                onClick={this.handleUpdateSortBy}
+              >
                 {name}
               </button>
             ))}
           </div>
           <div id="distance-buttons-container">
             <span>Within: </span>
-            {SEARCH_DISTANCE_OPTIONS.map(searchDistanceOption => (
-              <button
-                className="btn"
-                key={`search-distance-option-${searchDistanceOption}`}
-                value={searchDistanceOption}
-                onClick={this.handleUpdateSearchDistance}
-              >
-                {searchDistanceOption} {searchDistanceOption === 1 ? "mile" : "miles"}
-              </button>
-            ))}
+            {SEARCH_DISTANCE_OPTIONS.map(searchDistanceOption => {
+              return (
+                <button
+                  className={`${searchDistance === searchDistanceOption ? "btn active" : "btn"}`}
+                  key={`search-distance-option-${searchDistanceOption}`}
+                  value={searchDistanceOption}
+                  onClick={this.handleUpdateSearchDistance}
+                >
+                  {searchDistanceOption} {searchDistanceOption === "1" ? "mile" : "miles"}
+                </button>
+              );
+            })}
           </div>
         </div>
-        {loading ? <Loading /> : null}
-        <div id="search-content-container" className={`${loading ? "hidden " : ""}search-content-container`}>
+        <Loading {...{ loading }} />
+        <div
+          id="search-content-container"
+          className={`${loading ? "hidden search-content-container" : "search-content-container"}`}
+        >
           {this.props.children}
         </div>
       </Fragment>

@@ -7,12 +7,16 @@ const getGasStationDetail = params => {
 
     getGasStationDetailService(params)
       .then(res => {
-        const { details, previousPrices } = res;
+        const { details } = res;
 
-        dispatch({ type: DETAIL_ACTIONS.UPDATE_GAS_STATION_DETAIL, payload: { ...details, previousPrices } });
+        dispatch({ type: DETAIL_ACTIONS.UPDATE_GAS_STATION_DETAIL, payload: { ...details } });
         dispatch({ type: APP_ACTIONS.UPDATE_LOADING, payload: { loading: false } });
       })
-      .catch(err => {});
+      .catch(err => {
+        const { message } = (err && err.Status) || {};
+        alert(message);
+        dispatch({ type: APP_ACTIONS.UPDATE_LOADING, payload: { loading: false } });
+      });
   };
 };
 

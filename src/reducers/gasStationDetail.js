@@ -22,8 +22,7 @@ const gasStationDetail = (state = initialState, { type, payload }) => {
         pre_price: payload.pre_price,
         pre_date: payload.pre_date,
         diesel_price: payload.diesel_price,
-        diesel_date: payload.diesel_date,
-        previousPrices: payload.previousPrices
+        diesel_date: payload.diesel_date
       };
       return { ...state, gasStationDetail };
     }
