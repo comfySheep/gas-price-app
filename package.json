@@ -15,6 +15,7 @@
     "redux-thunk": "^2.3.0"
   },
   "homepage": "https://comfysheep.github.io/gas-price-app/",
+  "proxy": "http://devapi.mygasfeed.com",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
