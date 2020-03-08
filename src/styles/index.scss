@@ -1,0 +1,126 @@
+@import "./defaults.scss", "./keyframes.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: $low_grey;
+  font-family: $font_family;
+  font-size: $default_font_size;
+}
+
+#search-layout {
+  text-align: center;
+}
+
+#sort-buttons-container,
+#distance-buttons-container {
+  display: inline-block;
+  margin: 2vh;
+}
+
+.btn {
+  font-size: $default_font_size;
+  color: $button_color;
+  background-color: $low_teal;
+  border: 1px solid $low_teal;
+  border-radius: 1.5rem;
+  transition: 0.3s;
+  margin: 0.2vh;
+  padding: 1vh;
+  cursor: pointer;
+  &.active {
+    background-color: $high_teal;
+  }
+  &:hover {
+    background-color: $mid_teal;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+#map {
+  width: $map_width;
+  height: $map_height;
+  margin: $default_margin auto;
+  padding: 0;
+  box-shadow: $box_shadow;
+}
+
+#loading {
+  margin: 0 auto;
+  width: $spinner_width;
+  height: $spinner_height;
+  border: 5px solid $dark_blue_grey;
+  border-radius: 50%;
+  border-top-color: $light_blue_grey;
+  animation: spin 0.8s linear infinite;
+}
+
+.gas-station-list,
+#gas-station-detail {
+  margin: $default_margin;
+}
+
+.station-card {
+  display: flex;
+  flex-direction: column;
+  margin: $default_margin;
+  max-width: 90vw;
+  padding: 1vw;
+  background-color: $card_background_color;
+  box-shadow: $box_shadow;
+  border-radius: 1.5rem;
+  align-items: center;
+
+  &.selectable {
+    cursor: pointer;
+  }
+}
+
+.station-image {
+  transform: translate(0, -1vw);
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.station-title {
+  display: flex;
+  align-items: center;
+}
+
+.station-address {
+  max-width: 75%;
+
+  &.full-width {
+    max-width: 100%;
+  }
+}
+
+.station-distance {
+  margin-left: auto;
+}
+
+.station-price-container {
+  display: inline-block;
+  margin: $default_margin;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 600px) {
+  .station-price-container {
+    display: inline-block;
+    width: 38vw;
+  }
+}

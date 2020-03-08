@@ -4,13 +4,14 @@ import history from "History";
 import { SearchLayout } from "layouts";
 import GasStationList from "page/GasStationList";
 import GasStationDetail from "page/GasStationDetail";
+import "styles/index.scss";
 
 const AppRoute = ({ page: Page, layout: Layout, ...rest }) => (
   <Route
     {...rest}
     render={props => {
       return (
-        <Layout>
+        <Layout {...props}>
           <Page {...props} />
         </Layout>
       );
