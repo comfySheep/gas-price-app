@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/gas-price-app/static/css/main.277b7cea.chunk.css",
-    "main.js": "/gas-price-app/static/js/main.b1333f42.chunk.js",
-    "main.js.map": "/gas-price-app/static/js/main.b1333f42.chunk.js.map",
+    "main.js": "/gas-price-app/static/js/main.2c07718c.chunk.js",
+    "main.js.map": "/gas-price-app/static/js/main.2c07718c.chunk.js.map",
     "runtime-main.js": "/gas-price-app/static/js/runtime-main.c9bd29fa.js",
     "runtime-main.js.map": "/gas-price-app/static/js/runtime-main.c9bd29fa.js.map",
     "static/js/2.d32f980d.chunk.js": "/gas-price-app/static/js/2.d32f980d.chunk.js",
     "static/js/2.d32f980d.chunk.js.map": "/gas-price-app/static/js/2.d32f980d.chunk.js.map",
     "index.html": "/gas-price-app/index.html",
-    "precache-manifest.ce36ef5065814839e8f770e903d8af05.js": "/gas-price-app/precache-manifest.ce36ef5065814839e8f770e903d8af05.js",
+    "precache-manifest.5da639221f0364edddddd21bf41f30e6.js": "/gas-price-app/precache-manifest.5da639221f0364edddddd21bf41f30e6.js",
     "service-worker.js": "/gas-price-app/service-worker.js",
     "static/css/main.277b7cea.chunk.css.map": "/gas-price-app/static/css/main.277b7cea.chunk.css.map",
     "static/js/2.d32f980d.chunk.js.LICENSE.txt": "/gas-price-app/static/js/2.d32f980d.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.c9bd29fa.js",
     "static/js/2.d32f980d.chunk.js",
     "static/css/main.277b7cea.chunk.css",
-    "static/js/main.b1333f42.chunk.js"
+    "static/js/main.2c07718c.chunk.js"
   ]
 }
