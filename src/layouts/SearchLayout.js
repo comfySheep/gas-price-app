@@ -41,7 +41,10 @@ class SearchLayout extends Component {
   };
 
   handleSearchStations = () => {
-    navigator.geolocation.getCurrentPosition(this.handleGetGasStationList, () => {});
+    navigator.geolocation.getCurrentPosition(this.handleGetGasStationList, error => {
+      const { code, message } = error;
+      alert(`ERROR ${code}: ${message}`);
+    });
   };
 
   handleGetGasStationList = position => {
@@ -56,12 +59,9 @@ class SearchLayout extends Component {
       sortBy
     };
 
-    getGasStationList(params)
-      .then(err => {
-        console.log(err);
-        handleDisplaySearchStationList();
-      })
-      .catch(err => {});
+    getGasStationList(params).then(() => {
+      handleDisplaySearchStationList();
+    });
   };
 
   render() {

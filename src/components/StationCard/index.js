@@ -21,10 +21,10 @@ const StationCard = props => {
     distance
   } = gasStation;
   const gasPrices = [
-    { name: "Regular - ", price: reg_price, date: reg_date },
-    { name: "Midgrade - ", price: mid_price, date: mid_date },
-    { name: "Premium - ", price: pre_price, date: pre_date },
-    { name: "Diesel - ", price: diesel_price, date: diesel_date }
+    { name: "Regular", price: reg_price, date: reg_date },
+    { name: "Midgrade", price: mid_price, date: mid_date },
+    { name: "Premium", price: pre_price, date: pre_date },
+    { name: "Diesel", price: diesel_price, date: diesel_date }
   ];
   return (
     <div
@@ -46,12 +46,10 @@ const StationCard = props => {
           </h2>
           {distance ? <div className="station-distance bold">{distance}</div> : null}
         </div>
-        {gasPrices.map(({ name, price, date }) => (
-          <div className="station-price-container">
-            <div className="station-price">
-              {name}
-              <div className="station-price bold">{isNaN(price) ? price : `$${price}`}</div>
-            </div>
+        {gasPrices.map(({ name, price, date }, index) => (
+          <div key={`station-price-container-${index}`} className="station-price-container">
+            <div className="station-price">{name}</div>
+            <div className="station-price bold">{isNaN(price) ? price : `$${price}`}</div>
             <div className="station-price">{date}</div>
           </div>
         ))}

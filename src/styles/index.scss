@@ -112,6 +112,8 @@ body {
 .station-price-container {
   display: inline-block;
   margin: $default_margin;
+  line-height: 150%;
+  text-align: center;
 }
 
 .bold {
@@ -121,6 +123,6 @@ body {
 @media screen and (max-width: 600px) {
   .station-price-container {
     display: inline-block;
-    width: 38vw;
+    width: 44%;
   }
 }
