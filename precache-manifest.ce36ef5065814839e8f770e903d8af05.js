@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9e3b89e292c6c62a5c15965d8e1ac25e",
+    "revision": "47f12df8787ef628d3cb79f476c16bc4",
     "url": "/gas-price-app/index.html"
   },
   {
-    "revision": "ed6f41b8392c66d015cb",
-    "url": "/gas-price-app/static/css/main.76fca8d3.chunk.css"
+    "revision": "fb5fc724871a73269aa8",
+    "url": "/gas-price-app/static/css/main.277b7cea.chunk.css"
   },
   {
     "revision": "5bc27bbc695a290604d6",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/gas-price-app/static/js/2.d32f980d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ed6f41b8392c66d015cb",
-    "url": "/gas-price-app/static/js/main.fe9b4777.chunk.js"
+    "revision": "fb5fc724871a73269aa8",
+    "url": "/gas-price-app/static/js/main.b1333f42.chunk.js"
   },
   {
     "revision": "884f78a967063f774696",
