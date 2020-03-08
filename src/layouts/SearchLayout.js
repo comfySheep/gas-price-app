@@ -29,15 +29,13 @@ class SearchLayout extends Component {
   handleUpdateSortBy = e => {
     const sortBy = e.target.value;
 
-    this.setState({ sortBy });
-    this.handleSearchStations();
+    this.setState({ sortBy }, this.handleSearchStations);
   };
 
   handleUpdateSearchDistance = e => {
     const searchDistance = e.target.value;
 
-    this.setState({ searchDistance });
-    this.handleSearchStations();
+    this.setState({ searchDistance }, this.handleSearchStations);
   };
 
   handleSearchStations = () => {
@@ -115,4 +113,7 @@ const mapStatetoProps = ({ app }) => ({ ...app });
 
 const mapActionsToProps = { getGasStationList };
 
-export default connect(mapStatetoProps, mapActionsToProps)(SearchLayout);
+export default connect(
+  mapStatetoProps,
+  mapActionsToProps
+)(SearchLayout);
