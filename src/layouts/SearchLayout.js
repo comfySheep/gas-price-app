@@ -56,8 +56,12 @@ class SearchLayout extends Component {
       sortBy
     };
 
-    getGasStationList(params);
-    handleDisplaySearchStationList();
+    getGasStationList(params)
+      .then(err => {
+        console.log(err);
+        handleDisplaySearchStationList();
+      })
+      .catch(err => {});
   };
 
   render() {

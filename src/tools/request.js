@@ -6,7 +6,7 @@ const fetch = options => {
     case "get":
       return axios.get(url, { params, headers });
     default:
-      return axios(options);
+      return Promise.reject({ response: { data: { Status: { message: "This API method is not available" } } } });
   }
 };
 

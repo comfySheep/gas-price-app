@@ -1,7 +1,12 @@
-//font-family
+//font
 $font_family: Arial, Helvetica, sans-serif;
+$default_font_size: 16px;
 
 //color
+$low_grey: #eee;
+$mid_grey: #bdbdbd;
+$high_grey: #757575;
+
 $low_teal: #b2dfdb;
 $mid_teal: #4db6ac;
 $high_teal: #009688;
@@ -11,10 +16,17 @@ $dark_blue_grey: #455a64;
 
 $button_color: #fff;
 
+//margin
+$default_margin: 2vw;
+
 //MAP
-$map_width: 30vh;
+$map_width: 92vw;
 $map_height: 30vh;
 
 //SPINNER
-$spinner_width: 5vh;
-$spinner_height: 5vh;
+$spinner_width: 5vw;
+$spinner_height: 5vw;
+
+//CARD
+$card_background_color: #fff;
+$box_shadow: 1vw 1vw 1vw $mid_grey;

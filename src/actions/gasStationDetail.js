@@ -14,6 +14,7 @@ const getGasStationDetail = params => {
       })
       .catch(err => {
         const { message } = (err && err.Status) || {};
+
         alert(message);
         dispatch({ type: APP_ACTIONS.UPDATE_LOADING, payload: { loading: false } });
       });

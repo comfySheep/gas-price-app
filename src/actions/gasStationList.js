@@ -5,7 +5,7 @@ const getGasStationList = params => {
   return dispatch => {
     dispatch({ type: APP_ACTIONS.UPDATE_LOADING, payload: { loading: true } });
 
-    getGasStationsService(params)
+    return getGasStationsService(params)
       .then(res => {
         if (typeof res !== "object") {
           res = JSON.parse(res.substring(res.indexOf('{"status":{"error":')));
